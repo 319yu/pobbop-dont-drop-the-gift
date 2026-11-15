@@ -18,6 +18,7 @@
 .game-shell:not(.is-playing) .brand{background:#1a1a1a}
 .game-shell:not(.is-playing) .brand img{filter:none;mix-blend-mode:normal}
 .game-shell:not(.is-playing) .wind-meter{opacity:0;visibility:hidden}
+.game-shell:not(.is-playing)>canvas{opacity:0}
 .hud{top:22px;left:var(--edge);right:var(--edge);padding-top:7px;border-top:1px solid rgba(26,26,26,.48)}
 .hud>div:first-child{min-width:128px;padding:10px 0 0}
 .hud>div:first-child>strong{display:block;font-size:34px;line-height:1}
