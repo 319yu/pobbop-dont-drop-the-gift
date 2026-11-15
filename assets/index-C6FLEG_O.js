@@ -2,7 +2,7 @@
 <main class="game-shell">
   <canvas id="game" aria-label="POBBOP gift stacking game"></canvas>
   <header class="hud hidden" id="hud"><div><span>LEVEL SCORE</span><strong id="score">00</strong><small class="total-score">TOTAL <b id="totalScore">00</b></small></div><div class="stage-hud"><span id="stageName">LEVEL 1 · THE WARM-UP</span><div class="stage-track"><i id="stageProgress"></i></div><small id="stageScore">0/10 · KEEP STACKING</small></div><div class="hud-actions"><button id="sound" aria-label="Mute sound">SOUND ON</button><button id="pause" aria-label="Pause game">PAUSE</button><div><span>LIVES</span><strong id="lives">● ● ●</strong></div></div></header>
-  <div class="brand"><img src="/pobbop-dont-drop-the-gift/POBBOP_Brand_Project/assets/logo.png" alt="POBBOP" /></div>
+  <div class="brand"><img src="/pobbop-dont-drop-the-gift/assets/pobbop-logo.png" alt="POBBOP" /></div>
   <aside class="wind-meter" id="windMeter"><span>WIND SYSTEM</span><strong id="windArrow">—</strong><div class="wind-lines"><i></i><i></i><i></i></div><small id="windLabel">CALM</small></aside>
   <section class="screen start" id="start"><p class="eyebrow">POBBOP PRESENTS / 001</p><h1>DON'T DROP<br>THE GIFT!</h1><p class="subtitle">HOW HIGH CAN YOU GO?</p><button class="primary" id="startBtn">START STACKING <i>↗</i></button><p class="hint">TAP TO DROP. DON'T LET IT FALL.</p></section>
   <section class="screen pause-screen hidden" id="pauseScreen"><p class="eyebrow">TAKE A BREATH</p><h2>PAUSED.</h2><button class="primary" id="resumeBtn">KEEP STACKING</button></section>
