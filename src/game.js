@@ -8,7 +8,7 @@ export class GiftGame {
   constructor(canvas, callbacks, sound) {
     this.canvas = canvas; this.ctx = canvas.getContext('2d'); this.cb = callbacks; this.sound = sound;
     this.engine = Engine.create({ enableSleeping: true }); this.engine.gravity.y = 1.05;
-    this.boxes = []; this.particles = []; this.score = 0; this.stageScore = 0; this.lives = 3;
+    this.boxes = []; this.particles = []; this.rings = []; this.score = 0; this.stageScore = 0; this.lives = 3;
     this.active = null; this.state = 'idle'; this.cameraY = 0; this.targetCameraY = 0; this.slowBoxes = 0;
     this.perfectStreak = 0; this.butterfly = null; this.butterflyShown = false; this.stage = STAGES[0]; this.stageBaseScore = 0; this.endless = false; this.wind = 0; this.windClock = 0; this.dpr = 1; this.lastTime = performance.now();
     // Physics and drawing intentionally share one animation clock. A separate
@@ -25,6 +25,9 @@ export class GiftGame {
   bindPhysics() {
     this.onCollision = e => e.pairs.forEach(({ bodyA, bodyB, collision }) => {
       const speed = Math.abs(collision.depth || 0) + Math.abs(bodyA.speed || 0) + Math.abs(bodyB.speed || 0);
+      const impactUntil = performance.now() + Math.min(150, 65 + speed * 6);
+      if (bodyA.plugin?.pobbop) bodyA.plugin.pobbop.impactUntil = impactUntil;
+      if (bodyB.plugin?.pobbop) bodyB.plugin.pobbop.impactUntil = impactUntil;
       if (speed > 2 && performance.now() - (this.lastHit || 0) > 90) { this.sound.hit(speed); this.lastHit = performance.now(); }
     });
     Events.on(this.engine, 'collisionStart', this.onCollision);
@@ -41,7 +44,7 @@ export class GiftGame {
   }
   reset() {
     this.engine.timing.timeScale = 1;
-    Composite.clear(this.engine.world, false); Engine.clear(this.engine); this.boxes = []; this.particles = [];
+    Composite.clear(this.engine.world, false); Engine.clear(this.engine); this.boxes = []; this.particles = []; this.rings = [];
     this.score = 0; this.stageScore = 0; this.lives = 3; this.perfectStreak = 0; this.slowBoxes = 0; this.cameraY = 0; this.targetCameraY = 0; this.butterfly = null; this.butterflyShown = false; this.active = null;
     this.stage = STAGES[0]; this.stageBaseScore = 0; this.endless = false; this.wind = 0; this.windClock = 0;
     this.buildWorld(); this.cb.stats(this.score, this.lives, this.stageScore); this.cb.stage(this.stage, 0, 0);
@@ -126,7 +129,7 @@ export class GiftGame {
     const b = this.active, p = b.plugin.pobbop; if (!b || p.scored) return;
     p.scored = true; this.boxes.push(b); this.active = null; this.score++; this.stageScore++;
     const support = this.findSupport(b), perfect = support && Math.abs(b.position.x - support.position.x) < p.w * GAME.perfectRatio;
-    if (perfect) { this.perfectStreak++; this.sound.perfect(); this.cb.flash('PERFECT!'); this.burst(b.position.x, b.position.y, COLORS.lemon); }
+    if (perfect) { this.perfectStreak++; this.sound.perfect(); this.cb.flash('PERFECT!'); this.burst(b.position.x, b.position.y, COLORS.lemon); this.rings.push({x:b.position.x,y:b.position.y,life:1}); }
     else this.perfectStreak = 0;
     if (this.perfectStreak >= 3) { this.perfectStreak = 0; this.score++; this.stageScore++; this.cb.flash('3× PERFECT · BONUS +1'); this.sound.reward(); }
     if (p.type === 'mystery') this.applyMystery();
@@ -149,7 +152,7 @@ export class GiftGame {
     if (this.state !== 'levelChoice') return;
     if (this.stage.number < 3) this.stage = STAGES[this.stage.number];
     else { this.endless = true; this.stage = { ...STAGES[2], name: 'INFINITE AIR', platformWidth: 160, wind: .00004 }; }
-    Composite.clear(this.engine.world, false); Engine.clear(this.engine); this.boxes = []; this.particles = []; this.active = null;
+    Composite.clear(this.engine.world, false); Engine.clear(this.engine); this.boxes = []; this.particles = []; this.rings = []; this.active = null;
     this.lives = 3; this.stageScore = 0; this.stageBaseScore = this.score; this.perfectStreak = 0; this.cameraY = 0; this.targetCameraY = 0; this.windClock = 0; this.wind = 0;
     this.buildWorld(); this.state = 'playing'; this.engine.timing.timeScale = 1; this.lastTime = performance.now();
     this.cb.stats(this.score, this.lives, this.stageScore); this.cb.stage(this.stage, 0, 0); this.cb.stageClear(this.stage); this.spawn();
@@ -190,7 +193,7 @@ export class GiftGame {
   }
   getTowerTop() { return this.boxes.length ? Math.min(...this.boxes.map(b => b.bounds.min.y)) : this.platformY; }
   burst(x, y, color) { for (let i=0;i<18;i++) this.particles.push({ x, y, vx:(Math.random()-.5)*160, vy:(Math.random()-.8)*150, life:1, color }); }
-  updateParticles(dt) { this.particles.forEach(p => { p.x+=p.vx*dt; p.y+=p.vy*dt; p.vy+=190*dt; p.life-=dt*1.3; }); this.particles=this.particles.filter(p=>p.life>0); }
+  updateParticles(dt) { this.particles.forEach(p => { p.x+=p.vx*dt; p.y+=p.vy*dt; p.vy+=190*dt; p.life-=dt*1.3; }); this.particles=this.particles.filter(p=>p.life>0); this.rings.forEach(r=>r.life-=dt*1.7);this.rings=this.rings.filter(r=>r.life>0); }
   resize() {
     const rect = this.canvas.getBoundingClientRect(); this.dpr = Math.min(2, devicePixelRatio || 1); this.canvas.width = rect.width*this.dpr; this.canvas.height=rect.height*this.dpr;
     this.viewW=rect.width; this.viewH=rect.height; this.scale=Math.min(rect.width/GAME.worldWidth, rect.height/GAME.worldHeight); this.offsetX=(rect.width-GAME.worldWidth*this.scale)/2; this.offsetY=(rect.height-GAME.worldHeight*this.scale)/2;
@@ -212,19 +215,24 @@ export class GiftGame {
     }
     const c=this.ctx; c.setTransform(this.dpr,0,0,this.dpr,0,0); c.clearRect(0,0,this.viewW,this.viewH); c.save(); c.translate(this.offsetX,this.offsetY); c.scale(this.scale,this.scale); c.translate(0,-this.cameraY);
     this.drawWindZones(c,time);
+    if(this.active&&!this.active.plugin.pobbop.released)this.drawDropGuide(c,this.active);
     c.fillStyle='#121212'; c.shadowColor='rgba(0,0,0,.18)'; c.shadowBlur=24; c.fillRect(this.platform.position.x-this.platformWidth/2,this.platformY-14,this.platformWidth,28); c.shadowBlur=0;
     [...this.boxes, ...(this.active?[this.active]:[])].forEach(b=>this.drawBox(c,b));
     this.particles.forEach(p=>{c.globalAlpha=p.life;c.fillStyle=p.color;c.beginPath();c.arc(p.x,p.y,4,0,Math.PI*2);c.fill();}); c.globalAlpha=1;
+    this.rings.forEach(r=>{c.globalAlpha=r.life;c.strokeStyle=COLORS.lemon;c.lineWidth=3;c.beginPath();c.ellipse(r.x,r.y,35+(1-r.life)*90,18+(1-r.life)*35,0,0,Math.PI*2);c.stroke();});c.globalAlpha=1;
     if(this.butterfly) this.drawButterfly(c,time); c.restore();
   }
   drawBox(c,b) {
-    const p=b.plugin.pobbop,w=p.w,h=p.h;c.save();c.translate(b.position.x,b.position.y);c.rotate(b.angle);c.shadowColor='rgba(0,0,0,.22)';c.shadowBlur=18;c.shadowOffsetY=12;
+    const p=b.plugin.pobbop,w=p.w,h=p.h,impact=Math.max(0,(p.impactUntil||0)-performance.now());c.save();c.translate(b.position.x,b.position.y);c.rotate(b.angle);if(impact)c.scale(1+impact/2200,1-impact/900);c.shadowColor='rgba(0,0,0,.24)';c.shadowBlur=20;c.shadowOffsetY=13;
     c.fillStyle=p.cfg.fill;this.roundRect(c,-w/2,-h/2,w,h,p.cfg.chamfer);c.fill();c.shadowBlur=0;c.shadowOffsetY=0;
-    c.fillStyle=p.type==='bouncy'?'#cbd526':p.type==='mirror'?'#94999e':'#050505';c.beginPath();c.moveTo(-w/2,-h/2);c.lineTo(-w/2+10,-h/2-8);c.lineTo(w/2+10,-h/2-8);c.lineTo(w/2,-h/2);c.closePath();c.fill();
+    c.fillStyle=p.type==='bouncy'?'#cbd526':p.type==='mirror'?'#94999e':p.type==='mystery'?'#b79a42':'#050505';c.beginPath();c.moveTo(-w/2,-h/2);c.lineTo(-w/2+10,-h/2-8);c.lineTo(w/2+10,-h/2-8);c.lineTo(w/2,-h/2);c.closePath();c.fill();
+    c.fillStyle=p.type==='mirror'?'rgba(255,255,255,.22)':'rgba(255,255,255,.07)';c.fillRect(-w/2+4,-h/2+4,w-8,2);
+    if(p.type==='classic'){c.strokeStyle='rgba(255,255,255,.055)';c.lineWidth=1;for(let y=-h/2+13;y<h/2-8;y+=8){c.beginPath();c.moveTo(-w/2+10,y);c.bezierCurveTo(-w/6,y-3,w/6,y+3,w/2-10,y);c.stroke();}}
     if(p.type==='mirror'){const g=c.createLinearGradient(-w/2,0,w/2,0);g.addColorStop(0,'#868b90');g.addColorStop(.35,'#f6f7f7');g.addColorStop(.52,'#b5b9bd');g.addColorStop(1,'#e4e5e6');c.fillStyle=g;this.roundRect(c,-w/2,-h/2,w,h,3);c.fill();}
     if(p.type==='mystery'){c.strokeStyle='#c7a94b';c.lineWidth=3;c.strokeRect(-w/2+2,-h/2+2,w-4,h-4);c.shadowColor='#E8F139';c.shadowBlur=12;c.stroke();}
     c.fillStyle=p.type==='bouncy'?'#1A1A1A':p.type==='mirror'?'#1A1A1A':'#EAE7DF';c.font='700 12px Arial';c.textAlign='center';c.textBaseline='middle';c.letterSpacing='2px';c.fillText('POBBOP',0,0);c.restore();
   }
+  drawDropGuide(c,b){const bottom=b.position.y+b.plugin.pobbop.h/2+8;c.save();c.strokeStyle='rgba(119,119,119,.22)';c.lineWidth=1;c.setLineDash([7,9]);c.beginPath();c.moveTo(b.position.x,bottom);c.lineTo(b.position.x,this.platformY-25);c.stroke();c.setLineDash([]);c.restore();}
   drawWindZones(c,time) {
     this.getWindZones().forEach((z,zi) => {
       const g=c.createLinearGradient(z.x,0,z.x+z.w,0);g.addColorStop(0,'rgba(232,241,57,0)');g.addColorStop(.5,'rgba(232,241,57,.16)');g.addColorStop(1,'rgba(232,241,57,0)');c.fillStyle=g;c.fillRect(z.x,z.top,z.w,z.bottom-z.top);
