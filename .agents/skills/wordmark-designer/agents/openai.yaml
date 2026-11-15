@@ -1,0 +1,4 @@
+interface:
+  display_name: "Wordmark Designer"
+  short_description: "Design original English wordmarks as editable SVG paths"
+  default_prompt: "Use $wordmark-designer to create three original typographic wordmark directions for my English brand name."
