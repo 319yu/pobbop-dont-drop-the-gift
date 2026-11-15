@@ -11,12 +11,12 @@ app.innerHTML=`
   <header class="hud hidden" id="hud"><div><span>LEVEL SCORE</span><strong id="score">00</strong><small class="total-score">TOTAL <b id="totalScore">00</b></small></div><div class="stage-hud"><span id="stageName">LEVEL 1 · THE WARM-UP</span><div class="stage-track"><i id="stageProgress"></i></div><small id="stageScore">0/10 · KEEP STACKING</small></div><div class="hud-actions"><button id="sound" aria-label="Mute sound">SOUND ON</button><button id="pause" aria-label="Pause game">PAUSE</button><div><span>LIVES</span><strong id="lives">● ● ●</strong></div></div></header>
   <div class="brand"><img src="${import.meta.env.BASE_URL}assets/pobbop-logo.png" alt="POBBOP" /></div>
   <aside class="wind-meter" id="windMeter"><span>WIND SYSTEM</span><strong id="windArrow">—</strong><div class="wind-lines"><i></i><i></i><i></i></div><small id="windLabel">CALM</small></aside>
-  <section class="screen start" id="start"><p class="eyebrow">POBBOP PRESENTS / 001</p><h1>DON'T DROP<br>THE GIFT!</h1><p class="subtitle">HOW HIGH CAN YOU GO?</p><button class="primary" id="startBtn">START STACKING <i>↗</i></button><p class="hint">TAP TO DROP. DON'T LET IT FALL.</p></section>
+  <section class="screen start" id="start"><div class="start-index" aria-hidden="true"><span>REUSABLE</span><span>REFOLDABLE</span><span>RECOMBINABLE</span></div><p class="eyebrow">POBBOP PRESENTS / GAME 001</p><h1>DON'T DROP<br>THE GIFT!</h1><p class="subtitle">HOW HIGH CAN YOU GO?</p><button class="primary" id="startBtn">START STACKING <i>↗</i></button><div class="control-guide" aria-label="Game controls"><span><b>SPACE</b> DROP</span><span><b>P / ESC</b> PAUSE</span><span><b>TAP</b> MOBILE</span></div><p class="hint">THREE LEVELS. TEN POINTS EACH. KEEP IT TOGETHER.</p></section>
   <section class="screen pause-screen hidden" id="pauseScreen"><p class="eyebrow">TAKE A BREATH</p><h2>PAUSED.</h2><button class="primary" id="resumeBtn">KEEP STACKING</button></section>
   <section class="level-card hidden" id="levelCard"><p>LEVEL UP</p><strong id="levelTitle">CROSSWIND</strong><span id="levelDetail">THE FLOOR GETS SMALLER.</span></section>
   <section class="screen level-choice hidden" id="levelChoice"><p class="eyebrow">LEVEL COMPLETE</p><h2 id="choiceTitle">THE WARM-UP<br>IS OVER.</h2><p class="subtitle">10+ POINTS SECURED. YOUR LIVES ARE SPENT.<br>WHAT HAPPENS NEXT IS YOUR CHOICE.</p><div class="choice-actions"><button class="primary" id="nextLevelBtn">ENTER NEXT LEVEL</button><button id="endRunBtn">END THIS RUN</button></div></section>
   <section class="screen end hidden" id="end"><p class="eyebrow">THE AFTERMATH</p><h2>WHAT A<br>BEAUTIFUL MESS.</h2><p class="subtitle">YOU DON'T FOLLOW THE RULES.<br>YOU STACK THEM.</p><div class="result"><div><span>SCORE</span><strong id="finalScore">0</strong></div><div><span>BEST</span><strong id="bestScore">0</strong></div></div><p class="rank" id="rank">THE BEGINNER</p><div class="end-actions"><button class="primary" id="againBtn">TRY AGAIN</button><button id="shareBtn">SHARE MY SCORE</button><a href="https://www.pobbop.com" id="exploreBtn">EXPLORE POBBOP ↗</a></div></section>
-  <div class="drop-hint hidden" id="dropHint">TAP TO DROP <span>↓</span></div><div class="flash" id="flash"></div>
+  <div class="drop-hint hidden" id="dropHint"><kbd>SPACE</kbd><span>OR TAP TO DROP</span><i>↓</i></div><div class="flash" id="flash"></div>
 </main>`;
 
 const $=s=>document.querySelector(s), sound=new SoundStudio();
@@ -29,13 +29,13 @@ const game=new GiftGame(canvas,{
   flash(text){clearTimeout(flashTimer);$('#flash').textContent=text;$('#flash').classList.add('show');flashTimer=setTimeout(()=>$('#flash').classList.remove('show'),1000);},
   pause(paused){$('#pauseScreen').classList.toggle('hidden',!paused);$('#pause').textContent=paused?'RESUME':'PAUSE';},
   shake(){shell.classList.add('shake');setTimeout(()=>shell.classList.remove('shake'),700);},
-  gameOver(score){sound.stopMusic();const best=Math.max(score,Number(localStorage.getItem('pobbop-best')||0));localStorage.setItem('pobbop-best',best);$('#finalScore').textContent=score;$('#bestScore').textContent=best;$('#rank').textContent=titleFor(score);$('#hud').classList.add('hidden');$('#windMeter').classList.add('hidden');$('#dropHint').classList.add('hidden');$('#levelChoice').classList.add('hidden');$('#end').classList.remove('hidden');}
+  gameOver(score){sound.stopMusic();shell.classList.remove('is-playing');const best=Math.max(score,Number(localStorage.getItem('pobbop-best')||0));localStorage.setItem('pobbop-best',best);$('#finalScore').textContent=score;$('#bestScore').textContent=best;$('#rank').textContent=titleFor(score);$('#hud').classList.add('hidden');$('#windMeter').classList.add('hidden');$('#dropHint').classList.add('hidden');$('#levelChoice').classList.add('hidden');$('#end').classList.remove('hidden');}
 },sound);
 // Useful for smoke tests and support diagnostics without coupling UI code to
 // Matter internals. This can be removed from production without changing play.
 window.__pobbopGame = game;
 
-function begin(){['#start','#end','#pauseScreen','#levelChoice'].forEach(s=>$(s).classList.add('hidden'));$('#hud').classList.remove('hidden');$('#dropHint').classList.remove('hidden');sound.startMusic();game.start();}
+function begin(){shell.classList.add('is-playing');['#start','#end','#pauseScreen','#levelChoice'].forEach(s=>$(s).classList.add('hidden'));$('#hud').classList.remove('hidden');$('#windMeter').classList.remove('hidden');$('#dropHint').classList.remove('hidden');sound.startMusic();game.start();}
 function attemptDrop(e){if(e?.target?.closest('button,a'))return;game.drop();}
 $('#startBtn').onclick=begin;$('#againBtn').onclick=begin;$('#pause').onclick=()=>game.pause();$('#resumeBtn').onclick=()=>game.pause(false);
 $('#nextLevelBtn').onclick=()=>{$('#levelChoice').classList.add('hidden');$('#dropHint').classList.remove('hidden');game.nextLevel();};$('#endRunBtn').onclick=()=>game.endRun();
