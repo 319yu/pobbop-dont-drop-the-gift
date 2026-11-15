@@ -1,0 +1,286 @@
+{
+  "brand": {
+    "name": {
+      "value": "POBBOP",
+      "source": "verified",
+      "confidence": "high"
+    },
+    "industry": {
+      "value": "consumer",
+      "source": "verified",
+      "confidence": "high"
+    },
+    "logo": {
+      "value": "../assets/logo.png",
+      "source": "verified",
+      "confidence": "high"
+    },
+    "logo_reverse": {
+      "value": "",
+      "source": "verified",
+      "confidence": "high"
+    },
+    "logo_final": {
+      "value": true,
+      "source": "verified",
+      "confidence": "high"
+    },
+    "raster_logo_edge_status": "verified",
+    "version": "v1.0",
+    "date": "2026 年 11 月",
+    "description": {
+      "value": "面向当代消费市场的品牌，以醒目的几何字标建立清晰、直接且易识别的视觉印象。",
+      "source": "derived",
+      "confidence": "medium"
+    },
+    "personality": {
+      "value": [
+        "年轻",
+        "醒目",
+        "几何",
+        "简洁"
+      ],
+      "source": "derived",
+      "confidence": "medium"
+    }
+  },
+  "output": {
+    "mode": "standard"
+  },
+  "cover": {
+    "style": "editorial-geometry",
+    "seed": "POBBOP"
+  },
+  "logo_quality": {
+    "resolution_score": 70,
+    "background_score": 62,
+    "edge_quality_score": 62,
+    "format_score": 92,
+    "overall_score": 69,
+    "source": "extracted",
+    "confidence": "high",
+    "warning": "Logo quality may affect accuracy."
+  },
+  "logo_analysis": {
+    "color_profile": {
+      "has_chromatic_color": true,
+      "source": "extracted",
+      "confidence": "high"
+    }
+  },
+  "measurement": {
+    "x_definition": {
+      "value": "Logo 可见图形高度",
+      "source": "derived",
+      "confidence": "high"
+    },
+    "visible_aspect_ratio": {
+      "value": 5.88356,
+      "source": "extracted",
+      "confidence": "high"
+    },
+    "clear_space_ratio": {
+      "value": 0.5,
+      "source": "derived",
+      "confidence": "medium"
+    },
+    "clear_space": {
+      "value": "0.5X",
+      "source": "derived",
+      "confidence": "medium"
+    },
+    "min_digital_px": {
+      "value": 160,
+      "source": "derived",
+      "confidence": "medium"
+    },
+    "min_print_mm": {
+      "value": 35,
+      "source": "recommended",
+      "confidence": "medium"
+    }
+  },
+  "colors": {
+    "primary": [
+      {
+        "value": {
+          "name": "POBBOP Lemon",
+          "hex": "#FCF518",
+          "role": "品牌识别与高能重点"
+        },
+        "source": "extracted",
+        "confidence": "high"
+      }
+    ],
+    "neutral": [
+      {
+        "value": {
+          "name": "POBBOP Black",
+          "hex": "#000000",
+          "role": "主背景与强对比文字"
+        },
+        "source": "extracted",
+        "confidence": "high"
+      },
+      {
+        "value": {
+          "name": "Soft White",
+          "hex": "#F7F7F2",
+          "role": "信息背景与留白"
+        },
+        "source": "recommended",
+        "confidence": "medium"
+      }
+    ],
+    "secondary": [
+      {
+        "value": {
+          "name": "Electric Lime",
+          "hex": "#C9FF18",
+          "role": "同类亮色辅助"
+        },
+        "source": "recommended",
+        "confidence": "medium"
+      },
+      {
+        "value": {
+          "name": "Signal Orange",
+          "hex": "#FF8A18",
+          "role": "限量强调与提示"
+        },
+        "source": "recommended",
+        "confidence": "medium"
+      }
+    ],
+    "proportions": [
+      {
+        "value": {
+          "name": "POBBOP Lemon",
+          "hex": "#FCF518",
+          "ratio": 45,
+          "role": "品牌识别"
+        },
+        "source": "recommended",
+        "confidence": "medium"
+      },
+      {
+        "value": {
+          "name": "POBBOP Black",
+          "hex": "#000000",
+          "ratio": 35,
+          "role": "主背景与文字"
+        },
+        "source": "recommended",
+        "confidence": "medium"
+      },
+      {
+        "value": {
+          "name": "Soft White",
+          "hex": "#F7F7F2",
+          "ratio": 15,
+          "role": "留白与信息层"
+        },
+        "source": "recommended",
+        "confidence": "medium"
+      },
+      {
+        "value": {
+          "name": "Signal Orange",
+          "hex": "#FF8A18",
+          "ratio": 5,
+          "role": "少量提示"
+        },
+        "source": "recommended",
+        "confidence": "medium"
+      }
+    ],
+    "gradient": {
+      "value": [
+        "#FCF518",
+        "#C9FF18"
+      ],
+      "source": "recommended",
+      "confidence": "medium"
+    }
+  },
+  "typography": {
+    "latin": {
+      "value": {
+        "family": "Plus Jakarta Sans",
+        "fallback": "Arial, sans-serif"
+      },
+      "source": "recommended",
+      "confidence": "medium"
+    },
+    "cjk": {
+      "value": {
+        "family": "Alibaba PuHuiTi 3",
+        "fallback": "sans-serif"
+      },
+      "source": "recommended",
+      "confidence": "medium"
+    }
+  },
+  "asset_evidence": {
+    "logo_lockups": {
+      "value": false,
+      "source": "verified",
+      "confidence": "high"
+    },
+    "small_format_mark": {
+      "value": false,
+      "source": "verified",
+      "confidence": "high"
+    },
+    "co_branding": {
+      "value": false,
+      "source": "verified",
+      "confidence": "high"
+    },
+    "secondary_colors": {
+      "value": true,
+      "source": "recommended",
+      "confidence": "medium"
+    },
+    "gradient": {
+      "value": true,
+      "source": "recommended",
+      "confidence": "medium"
+    },
+    "graphic_language": {
+      "value": true,
+      "source": "derived",
+      "confidence": "medium"
+    },
+    "imagery": {
+      "value": false,
+      "source": "recommended",
+      "confidence": "low"
+    },
+    "expression": {
+      "value": false,
+      "source": "recommended",
+      "confidence": "low"
+    },
+    "packaging": {
+      "value": false,
+      "source": "recommended",
+      "confidence": "low"
+    },
+    "product_visual": {
+      "value": false,
+      "source": "recommended",
+      "confidence": "low"
+    },
+    "spatial_design": {
+      "value": false,
+      "source": "recommended",
+      "confidence": "low"
+    },
+    "complex_illustration": {
+      "value": false,
+      "source": "recommended",
+      "confidence": "low"
+    }
+  }
+}

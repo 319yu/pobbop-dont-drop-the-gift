@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
+  <title id="title">POBBOP P B O geometric monogram concept</title>
+  <path id="pbo-monogram" fill="#111111" fill-rule="evenodd" d="
+    M128 20A108 108 0 1 1 127.9 20Z
+    M128 52A76 76 0 1 0 128.1 52Z
+    M76 58H124A42 42 0 0 1 124 142H108V198H76Z
+    M108 86V114H122A14 14 0 0 0 122 86Z
+    M132 58H160A38 38 0 0 1 184 125A40 40 0 0 1 158 198H132Z
+    M160 86V114H164A14 14 0 0 0 164 86Z
+    M160 142V170H166A14 14 0 0 0 166 142Z"/>
+</svg>

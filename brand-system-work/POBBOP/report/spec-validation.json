@@ -1,0 +1,50 @@
+{
+  "status": "passed",
+  "brand_name": "POBBOP",
+  "industry": "consumer",
+  "logo": "/Users/huangyu/Documents/POBBOP/brand-system-work/POBBOP/source/logo-clean.png",
+  "logo_quality": {
+    "resolution_score": 70,
+    "background_score": 62,
+    "edge_quality_score": 62,
+    "format_score": 92,
+    "overall_score": 69,
+    "source": "extracted",
+    "confidence": "high",
+    "warning": "Logo quality may affect accuracy."
+  },
+  "mode": "standard",
+  "page_ceiling": 27,
+  "asset_gate": {
+    "allowed": [
+      "graphic_language"
+    ],
+    "recommended": [
+      "secondary_colors",
+      "gradient"
+    ],
+    "omitted": [
+      {
+        "asset": "logo_lockups",
+        "reason": "Insufficient brand evidence. Recommendation only."
+      },
+      {
+        "asset": "small_format_mark",
+        "reason": "Insufficient brand evidence. Recommendation only."
+      },
+      {
+        "asset": "co_branding",
+        "reason": "Insufficient brand evidence. Recommendation only."
+      },
+      {
+        "asset": "imagery",
+        "reason": "Insufficient brand evidence. Recommendation only."
+      },
+      {
+        "asset": "expression",
+        "reason": "Insufficient brand evidence. Recommendation only."
+      }
+    ],
+    "blocked": []
+  }
+}

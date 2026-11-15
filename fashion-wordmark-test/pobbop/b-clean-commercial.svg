@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 256" width="768" height="256" role="img" aria-labelledby="title">
+  <title id="title">POBBOP clean commercial fashion wordmark</title>
+  <g id="wordmark" fill="#111111" fill-rule="evenodd">
+    <path id="p1" d="M32 44H112V148H68V212H32ZM68 76V116H80V104H96V76Z"/>
+    <path id="o1" d="M132 44H236V212H132ZM168 80V176H200V80Z"/>
+    <path id="b1" d="M256 44H340V120L324 128L340 136V212H256ZM292 76V112H304V76ZM292 144V180H304V144Z"/>
+    <path id="b2" d="M360 44H444V120L428 128L444 136V212H360ZM396 76V112H408V76ZM396 144V180H408V144Z"/>
+    <path id="o2" d="M464 44H568V212H464ZM500 80V176H532V80Z"/>
+    <path id="p2" d="M588 44H668A52 52 0 0 1 668 148H624V212H588ZM624 76V116H640A20 20 0 0 0 640 76Z"/>
+  </g>
+</svg>

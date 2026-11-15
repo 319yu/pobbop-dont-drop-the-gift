@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 256" width="900" height="256" role="img" aria-labelledby="title">
+  <title id="title">POBBOP Axis Cut segmented wordmark</title>
+  <g fill="none" stroke="#111111" stroke-width="24" stroke-linecap="square" stroke-linejoin="round">
+    <path d="M48 208V48H104A40 40 0 0 1 104 128H56"/>
+    <path d="M233 48A80 80 0 0 1 233 208M217 208A80 80 0 0 1 217 48"/>
+    <path d="M342 120V48H394A36 36 0 0 1 394 120ZM342 136V208H398A36 36 0 0 0 398 136Z"/>
+    <path d="M454 120V48H506A36 36 0 0 1 506 120ZM454 136V208H510A36 36 0 0 0 510 136Z"/>
+    <path d="M647 48A80 80 0 0 1 647 208M631 208A80 80 0 0 1 631 48"/>
+    <path d="M756 208V48H812A40 40 0 0 1 812 128H764"/>
+  </g>
+</svg>

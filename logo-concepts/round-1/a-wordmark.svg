@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 256" width="768" height="256" role="img" aria-labelledby="title">
+  <title id="title">POBBOP custom wordmark concept</title>
+  <g id="wordmark" fill="#111111" fill-rule="evenodd">
+    <!-- P: 24 unit stem; 56 unit circular counter -->
+    <path d="M36 48H100A56 56 0 0 1 100 160H68V208H36ZM68 76V132H98A28 28 0 0 0 98 76Z"/>
+    <!-- O: rounded-square counter creates a softer fashion rhythm -->
+    <path d="M164 48H236A48 48 0 0 1 284 96V160A48 48 0 0 1 236 208H164A48 48 0 0 1 116 160V96A48 48 0 0 1 164 48ZM166 78A20 20 0 0 0 146 98V158A20 20 0 0 0 166 178H234A20 20 0 0 0 254 158V98A20 20 0 0 0 234 78Z"/>
+    <!-- Mirrored B pair shares an inward-facing fashion-label rhythm -->
+    <path d="M304 48H364A43 43 0 0 1 392 123A45 45 0 0 1 360 208H304ZM336 76V112H360A18 18 0 0 0 360 76ZM336 140V180H362A20 20 0 0 0 362 140Z"/>
+    <path d="M420 48H480A43 43 0 0 1 508 123A45 45 0 0 1 476 208H420ZM452 76V112H476A18 18 0 0 0 476 76ZM452 140V180H478A20 20 0 0 0 478 140Z"/>
+    <path d="M556 48H628A48 48 0 0 1 676 96V160A48 48 0 0 1 628 208H556A48 48 0 0 1 508 160V96A48 48 0 0 1 556 48ZM558 78A20 20 0 0 0 538 98V158A20 20 0 0 0 558 178H626A20 20 0 0 0 646 158V98A20 20 0 0 0 626 78Z"/>
+    <path d="M684 48H708A48 48 0 0 1 708 144H716V208H684ZM716 76V116H730A20 20 0 0 0 730 76Z"/>
+  </g>
+</svg>

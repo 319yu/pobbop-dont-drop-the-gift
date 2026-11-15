@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fashion Wordmark Designer"
+  short_description: "Design original fashion and streetwear wordmarks"
+  default_prompt: "Use $fashion-wordmark-designer to create three original English wordmark directions for my consumer brand."

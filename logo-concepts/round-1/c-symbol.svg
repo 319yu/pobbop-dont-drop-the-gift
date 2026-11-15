@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="title">
+  <title id="title">POBBOP abstract reusable fold symbol concept</title>
+  <g id="fold-loop" fill="#111111">
+    <path d="M112 132L70 62Q66 54 74 49L108 29Q120 22 120 36V108Q120 124 112 132Z"/>
+    <path d="M112 132L70 62Q66 54 74 49L108 29Q120 22 120 36V108Q120 124 112 132Z" transform="rotate(120 128 128)"/>
+    <path d="M112 132L70 62Q66 54 74 49L108 29Q120 22 120 36V108Q120 124 112 132Z" transform="rotate(240 128 128)"/>
+  </g>
+</svg>

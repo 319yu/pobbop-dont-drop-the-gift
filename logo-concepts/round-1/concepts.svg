@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1600" height="840" viewBox="0 0 1600 840"><defs><filter id="grey"><feColorMatrix type="saturate" values="0"/></filter></defs><rect width="1600" height="840" fill="#f7f7f4"/><text x="60" y="78" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="40" font-weight="700" fill="#161616">POBBOP — logo concepts</text><text x="60" y="116" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="20" fill="#6b6b6b">Round 1 · black-first · custom vector construction</text><rect x="60" y="150" width="474.667" height="630" rx="18" fill="#fff" stroke="#161616" stroke-width="2"/><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title" viewBox="0 0 768 256" x="90" y="190" width="414.667" height="300" preserveAspectRatio="xMidYMid meet">
+  <title id="c0-title">POBBOP custom wordmark concept</title>
+  <g id="c0-wordmark" fill="#111111" fill-rule="evenodd">
+    <!-- P: 24 unit stem; 56 unit circular counter -->
+    <path d="M36 48H100A56 56 0 0 1 100 160H68V208H36ZM68 76V132H98A28 28 0 0 0 98 76Z"/>
+    <!-- O: rounded-square counter creates a softer fashion rhythm -->
+    <path d="M164 48H236A48 48 0 0 1 284 96V160A48 48 0 0 1 236 208H164A48 48 0 0 1 116 160V96A48 48 0 0 1 164 48ZM166 78A20 20 0 0 0 146 98V158A20 20 0 0 0 166 178H234A20 20 0 0 0 254 158V98A20 20 0 0 0 234 78Z"/>
+    <!-- Mirrored B pair shares an inward-facing fashion-label rhythm -->
+    <path d="M304 48H364A43 43 0 0 1 392 123A45 45 0 0 1 360 208H304ZM336 76V112H360A18 18 0 0 0 360 76ZM336 140V180H362A20 20 0 0 0 362 140Z"/>
+    <path d="M420 48H480A43 43 0 0 1 508 123A45 45 0 0 1 476 208H420ZM452 76V112H476A18 18 0 0 0 476 76ZM452 140V180H478A20 20 0 0 0 478 140Z"/>
+    <path d="M556 48H628A48 48 0 0 1 676 96V160A48 48 0 0 1 628 208H556A48 48 0 0 1 508 160V96A48 48 0 0 1 556 48ZM558 78A20 20 0 0 0 538 98V158A20 20 0 0 0 558 178H626A20 20 0 0 0 646 158V98A20 20 0 0 0 626 78Z"/>
+    <path d="M684 48H708A48 48 0 0 1 708 144H716V208H684ZM716 76V116H730A20 20 0 0 0 730 76Z"/>
+  </g>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title" viewBox="0 0 768 256" x="90" y="516" width="64" height="64" preserveAspectRatio="xMidYMid meet">
+  <title id="s064-title">POBBOP custom wordmark concept</title>
+  <g id="s064-wordmark" fill="#111111" fill-rule="evenodd">
+    <!-- P: 24 unit stem; 56 unit circular counter -->
+    <path d="M36 48H100A56 56 0 0 1 100 160H68V208H36ZM68 76V132H98A28 28 0 0 0 98 76Z"/>
+    <!-- O: rounded-square counter creates a softer fashion rhythm -->
+    <path d="M164 48H236A48 48 0 0 1 284 96V160A48 48 0 0 1 236 208H164A48 48 0 0 1 116 160V96A48 48 0 0 1 164 48ZM166 78A20 20 0 0 0 146 98V158A20 20 0 0 0 166 178H234A20 20 0 0 0 254 158V98A20 20 0 0 0 234 78Z"/>
+    <!-- Mirrored B pair shares an inward-facing fashion-label rhythm -->
+    <path d="M304 48H364A43 43 0 0 1 392 123A45 45 0 0 1 360 208H304ZM336 76V112H360A18 18 0 0 0 360 76ZM336 140V180H362A20 20 0 0 0 362 140Z"/>
+    <path d="M420 48H480A43 43 0 0 1 508 123A45 45 0 0 1 476 208H420ZM452 76V112H476A18 18 0 0 0 476 76ZM452 140V180H478A20 20 0 0 0 478 140Z"/>
+    <path d="M556 48H628A48 48 0 0 1 676 96V160A48 48 0 0 1 628 208H556A48 48 0 0 1 508 160V96A48 48 0 0 1 556 48ZM558 78A20 20 0 0 0 538 98V158A20 20 0 0 0 558 178H626A20 20 0 0 0 646 158V98A20 20 0 0 0 626 78Z"/>
+    <path d="M684 48H708A48 48 0 0 1 708 144H716V208H684ZM716 76V116H730A20 20 0 0 0 730 76Z"/>
+  </g>
+</svg>
+</g><text x="122" y="600" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">64px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title" viewBox="0 0 768 256" x="180" y="548" width="32" height="32" preserveAspectRatio="xMidYMid meet">
+  <title id="s032-title">POBBOP custom wordmark concept</title>
+  <g id="s032-wordmark" fill="#111111" fill-rule="evenodd">
+    <!-- P: 24 unit stem; 56 unit circular counter -->
+    <path d="M36 48H100A56 56 0 0 1 100 160H68V208H36ZM68 76V132H98A28 28 0 0 0 98 76Z"/>
+    <!-- O: rounded-square counter creates a softer fashion rhythm -->
+    <path d="M164 48H236A48 48 0 0 1 284 96V160A48 48 0 0 1 236 208H164A48 48 0 0 1 116 160V96A48 48 0 0 1 164 48ZM166 78A20 20 0 0 0 146 98V158A20 20 0 0 0 166 178H234A20 20 0 0 0 254 158V98A20 20 0 0 0 234 78Z"/>
+    <!-- Mirrored B pair shares an inward-facing fashion-label rhythm -->
+    <path d="M304 48H364A43 43 0 0 1 392 123A45 45 0 0 1 360 208H304ZM336 76V112H360A18 18 0 0 0 360 76ZM336 140V180H362A20 20 0 0 0 362 140Z"/>
+    <path d="M420 48H480A43 43 0 0 1 508 123A45 45 0 0 1 476 208H420ZM452 76V112H476A18 18 0 0 0 476 76ZM452 140V180H478A20 20 0 0 0 478 140Z"/>
+    <path d="M556 48H628A48 48 0 0 1 676 96V160A48 48 0 0 1 628 208H556A48 48 0 0 1 508 160V96A48 48 0 0 1 556 48ZM558 78A20 20 0 0 0 538 98V158A20 20 0 0 0 558 178H626A20 20 0 0 0 646 158V98A20 20 0 0 0 626 78Z"/>
+    <path d="M684 48H708A48 48 0 0 1 708 144H716V208H684ZM716 76V116H730A20 20 0 0 0 730 76Z"/>
+  </g>
+</svg>
+</g><text x="196" y="600" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">32px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title" viewBox="0 0 768 256" x="238" y="564" width="16" height="16" preserveAspectRatio="xMidYMid meet">
+  <title id="s016-title">POBBOP custom wordmark concept</title>
+  <g id="s016-wordmark" fill="#111111" fill-rule="evenodd">
+    <!-- P: 24 unit stem; 56 unit circular counter -->
+    <path d="M36 48H100A56 56 0 0 1 100 160H68V208H36ZM68 76V132H98A28 28 0 0 0 98 76Z"/>
+    <!-- O: rounded-square counter creates a softer fashion rhythm -->
+    <path d="M164 48H236A48 48 0 0 1 284 96V160A48 48 0 0 1 236 208H164A48 48 0 0 1 116 160V96A48 48 0 0 1 164 48ZM166 78A20 20 0 0 0 146 98V158A20 20 0 0 0 166 178H234A20 20 0 0 0 254 158V98A20 20 0 0 0 234 78Z"/>
+    <!-- Mirrored B pair shares an inward-facing fashion-label rhythm -->
+    <path d="M304 48H364A43 43 0 0 1 392 123A45 45 0 0 1 360 208H304ZM336 76V112H360A18 18 0 0 0 360 76ZM336 140V180H362A20 20 0 0 0 362 140Z"/>
+    <path d="M420 48H480A43 43 0 0 1 508 123A45 45 0 0 1 476 208H420ZM452 76V112H476A18 18 0 0 0 476 76ZM452 140V180H478A20 20 0 0 0 478 140Z"/>
+    <path d="M556 48H628A48 48 0 0 1 676 96V160A48 48 0 0 1 628 208H556A48 48 0 0 1 508 160V96A48 48 0 0 1 556 48ZM558 78A20 20 0 0 0 538 98V158A20 20 0 0 0 558 178H626A20 20 0 0 0 646 158V98A20 20 0 0 0 626 78Z"/>
+    <path d="M684 48H708A48 48 0 0 1 708 144H716V208H684ZM716 76V116H730A20 20 0 0 0 730 76Z"/>
+  </g>
+</svg>
+</g><text x="246" y="600" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">16px</text><text x="90.0" y="636" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#161616">A · Rhythm Wordmark</text><text x="90.0" y="664" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="15" font-weight="700" fill="#161616" letter-spacing="1.5">RECOMMENDED</text><text x="90.0" y="698" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">Repeated round counters turn POBBOP into a</text><text x="90.0" y="724" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">confident visual beat.</text><rect x="562.667" y="150" width="474.667" height="630" rx="18" fill="#fff" stroke="#e4e4e0" stroke-width="1"/><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title" viewBox="0 0 256 256" x="592.667" y="190" width="414.667" height="300" preserveAspectRatio="xMidYMid meet">
+  <title id="c1-title">POBBOP P B O geometric monogram concept</title>
+  <path id="c1-pbo-monogram" fill="#111111" fill-rule="evenodd" d="
+    M128 20A108 108 0 1 1 127.9 20Z
+    M128 52A76 76 0 1 0 128.1 52Z
+    M76 58H124A42 42 0 0 1 124 142H108V198H76Z
+    M108 86V114H122A14 14 0 0 0 122 86Z
+    M132 58H160A38 38 0 0 1 184 125A40 40 0 0 1 158 198H132Z
+    M160 86V114H164A14 14 0 0 0 164 86Z
+    M160 142V170H166A14 14 0 0 0 166 142Z"/>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title" viewBox="0 0 256 256" x="592.667" y="516" width="64" height="64" preserveAspectRatio="xMidYMid meet">
+  <title id="s164-title">POBBOP P B O geometric monogram concept</title>
+  <path id="s164-pbo-monogram" fill="#111111" fill-rule="evenodd" d="
+    M128 20A108 108 0 1 1 127.9 20Z
+    M128 52A76 76 0 1 0 128.1 52Z
+    M76 58H124A42 42 0 0 1 124 142H108V198H76Z
+    M108 86V114H122A14 14 0 0 0 122 86Z
+    M132 58H160A38 38 0 0 1 184 125A40 40 0 0 1 158 198H132Z
+    M160 86V114H164A14 14 0 0 0 164 86Z
+    M160 142V170H166A14 14 0 0 0 166 142Z"/>
+</svg>
+</g><text x="624.667" y="600" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">64px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title" viewBox="0 0 256 256" x="682.667" y="548" width="32" height="32" preserveAspectRatio="xMidYMid meet">
+  <title id="s132-title">POBBOP P B O geometric monogram concept</title>
+  <path id="s132-pbo-monogram" fill="#111111" fill-rule="evenodd" d="
+    M128 20A108 108 0 1 1 127.9 20Z
+    M128 52A76 76 0 1 0 128.1 52Z
+    M76 58H124A42 42 0 0 1 124 142H108V198H76Z
+    M108 86V114H122A14 14 0 0 0 122 86Z
+    M132 58H160A38 38 0 0 1 184 125A40 40 0 0 1 158 198H132Z
+    M160 86V114H164A14 14 0 0 0 164 86Z
+    M160 142V170H166A14 14 0 0 0 166 142Z"/>
+</svg>
+</g><text x="698.667" y="600" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">32px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title" viewBox="0 0 256 256" x="740.667" y="564" width="16" height="16" preserveAspectRatio="xMidYMid meet">
+  <title id="s116-title">POBBOP P B O geometric monogram concept</title>
+  <path id="s116-pbo-monogram" fill="#111111" fill-rule="evenodd" d="
+    M128 20A108 108 0 1 1 127.9 20Z
+    M128 52A76 76 0 1 0 128.1 52Z
+    M76 58H124A42 42 0 0 1 124 142H108V198H76Z
+    M108 86V114H122A14 14 0 0 0 122 86Z
+    M132 58H160A38 38 0 0 1 184 125A40 40 0 0 1 158 198H132Z
+    M160 86V114H164A14 14 0 0 0 164 86Z
+    M160 142V170H166A14 14 0 0 0 166 142Z"/>
+</svg>
+</g><text x="748.667" y="600" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">16px</text><text x="592.6666666666667" y="636" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#161616">B · Orbit PBO</text><text x="592.6666666666667" y="670" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">P, B and O share one boundary like a</text><text x="592.6666666666667" y="696" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">compact fashion-house seal.</text><rect x="1065.33" y="150" width="474.667" height="630" rx="18" fill="#fff" stroke="#e4e4e0" stroke-width="1"/><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title" viewBox="0 0 256 256" x="1095.33" y="190" width="414.667" height="300" preserveAspectRatio="xMidYMid meet">
+  <title id="c2-title">POBBOP abstract reusable fold symbol concept</title>
+  <g id="c2-fold-loop" fill="#111111">
+    <path d="M112 132L70 62Q66 54 74 49L108 29Q120 22 120 36V108Q120 124 112 132Z"/>
+    <path d="M112 132L70 62Q66 54 74 49L108 29Q120 22 120 36V108Q120 124 112 132Z" transform="rotate(120 128 128)"/>
+    <path d="M112 132L70 62Q66 54 74 49L108 29Q120 22 120 36V108Q120 124 112 132Z" transform="rotate(240 128 128)"/>
+  </g>
+</svg>
+</g><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title" viewBox="0 0 256 256" x="1095.33" y="516" width="64" height="64" preserveAspectRatio="xMidYMid meet">
+  <title id="s264-title">POBBOP abstract reusable fold symbol concept</title>
+  <g id="s264-fold-loop" fill="#111111">
+    <path d="M112 132L70 62Q66 54 74 49L108 29Q120 22 120 36V108Q120 124 112 132Z"/>
+    <path d="M112 132L70 62Q66 54 74 49L108 29Q120 22 120 36V108Q120 124 112 132Z" transform="rotate(120 128 128)"/>
+    <path d="M112 132L70 62Q66 54 74 49L108 29Q120 22 120 36V108Q120 124 112 132Z" transform="rotate(240 128 128)"/>
+  </g>
+</svg>
+</g><text x="1127.33" y="600" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">64px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title" viewBox="0 0 256 256" x="1185.33" y="548" width="32" height="32" preserveAspectRatio="xMidYMid meet">
+  <title id="s232-title">POBBOP abstract reusable fold symbol concept</title>
+  <g id="s232-fold-loop" fill="#111111">
+    <path d="M112 132L70 62Q66 54 74 49L108 29Q120 22 120 36V108Q120 124 112 132Z"/>
+    <path d="M112 132L70 62Q66 54 74 49L108 29Q120 22 120 36V108Q120 124 112 132Z" transform="rotate(120 128 128)"/>
+    <path d="M112 132L70 62Q66 54 74 49L108 29Q120 22 120 36V108Q120 124 112 132Z" transform="rotate(240 128 128)"/>
+  </g>
+</svg>
+</g><text x="1201.33" y="600" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">32px</text><g filter="url(#grey)"><svg xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title" viewBox="0 0 256 256" x="1243.33" y="564" width="16" height="16" preserveAspectRatio="xMidYMid meet">
+  <title id="s216-title">POBBOP abstract reusable fold symbol concept</title>
+  <g id="s216-fold-loop" fill="#111111">
+    <path d="M112 132L70 62Q66 54 74 49L108 29Q120 22 120 36V108Q120 124 112 132Z"/>
+    <path d="M112 132L70 62Q66 54 74 49L108 29Q120 22 120 36V108Q120 124 112 132Z" transform="rotate(120 128 128)"/>
+    <path d="M112 132L70 62Q66 54 74 49L108 29Q120 22 120 36V108Q120 124 112 132Z" transform="rotate(240 128 128)"/>
+  </g>
+</svg>
+</g><text x="1251.33" y="600" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="12" fill="#8a8a8a" text-anchor="middle">16px</text><text x="1095.3333333333335" y="636" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="26" font-weight="700" fill="#161616">C · Infinite Fold</text><text x="1095.3333333333335" y="670" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">Three folded bands suggest reuse,</text><text x="1095.3333333333335" y="696" font-family="system-ui,-apple-system,'Segoe UI',Helvetica,Arial,sans-serif" font-size="19" fill="#555">transformation and a gift opening.</text></svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 256" width="900" height="256" role="img" aria-labelledby="title">
+  <title id="title">POBBOP Four Point segmented wordmark</title>
+  <g fill="none" stroke="#111111" stroke-width="22" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M48 208V48H104A40 40 0 0 1 104 128H48"/>
+    <path d="M233 48A80 80 0 0 1 313 120M313 136A80 80 0 0 1 241 208M225 208A80 80 0 0 1 153 136M153 120A80 80 0 0 1 225 48"/>
+    <path d="M342 208V48H394A38 38 0 0 1 394 124H342M342 132H398A38 38 0 0 1 398 208H342"/>
+    <path d="M454 208V48H506A38 38 0 0 1 506 124H454M454 132H510A38 38 0 0 1 510 208H454"/>
+    <path d="M647 48A80 80 0 0 1 727 120M727 136A80 80 0 0 1 655 208M639 208A80 80 0 0 1 567 136M567 120A80 80 0 0 1 639 48"/>
+    <path d="M756 208V48H812A40 40 0 0 1 812 128H756"/>
+  </g>
+</svg>

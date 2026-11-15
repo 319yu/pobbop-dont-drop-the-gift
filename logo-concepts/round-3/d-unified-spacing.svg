@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 920 256" width="920" height="256" role="img" aria-labelledby="title">
+  <title id="title">POBBOP unified segmented wordmark with equal spacing</title>
+  <g id="wordmark" fill="none" stroke="#111111" stroke-width="20" stroke-linecap="butt" stroke-linejoin="round">
+    <!-- Six 120-unit glyph boxes; 24-unit box gap; 32-unit visible gap. -->
+    <path id="p-1" d="M54 198V58H100A46 40 0 0 1 100 138H54"/>
+    <path id="o-1" d="M248 58A46 70 0 0 1 290 120M290 136A46 70 0 0 1 248 198M232 198A46 70 0 0 1 190 136M190 120A46 70 0 0 1 232 58"/>
+    <path id="b-1" d="M342 120V58H388A46 35 0 0 1 388 128M342 136H388A46 31 0 0 1 388 198H342V58"/>
+    <path id="b-2" d="M486 120V58H532A46 35 0 0 1 532 128M486 136H532A46 31 0 0 1 532 198H486V58"/>
+    <path id="o-2" d="M680 58A46 70 0 0 1 722 120M722 136A46 70 0 0 1 680 198M664 198A46 70 0 0 1 622 136M622 120A46 70 0 0 1 664 58"/>
+    <path id="p-2" d="M774 198V58H820A46 40 0 0 1 820 138H774"/>
+  </g>
+</svg>

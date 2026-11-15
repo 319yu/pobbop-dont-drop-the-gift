@@ -1,0 +1,181 @@
+{
+  "format": "png",
+  "canvas_px": [
+    2172,
+    724
+  ],
+  "visible_bounds_px": [
+    244,
+    198,
+    1962,
+    490
+  ],
+  "visible_size_px": [
+    1718,
+    292
+  ],
+  "bounds_method": "uniform_corner_background_difference",
+  "inferred_background_rgb": [
+    0,
+    0,
+    0
+  ],
+  "visible_aspect_ratio": 5.88356,
+  "guide_geometry": {
+    "artwork_aspect_ratio": 5.88356,
+    "aspect_ratio_source": "uniform_corner_background_difference",
+    "x_basis": "visible artwork height",
+    "artwork_width_in_x": 5.88356,
+    "clear_space_ratio": 0.5,
+    "grid_bands_vertical": [
+      "0.5X",
+      "X",
+      "0.5X"
+    ],
+    "grid_bands_horizontal": [
+      "0.5X",
+      "W",
+      "0.5X"
+    ],
+    "corner_hatching": true,
+    "status": "derived_proposal"
+  },
+  "has_transparency": false,
+  "edge_review": {
+    "status": "requires_visual_verification",
+    "semi_transparent_pixels": 0,
+    "transparent_rgb_residue_pixels": 0,
+    "required_backgrounds": [
+      "white",
+      "black",
+      "50% gray",
+      "checkerboard"
+    ],
+    "required_zoom": "400%-800%"
+  },
+  "palette_candidates": [
+    {
+      "hex": "#FCF518",
+      "rgb": [
+        252,
+        245,
+        24
+      ],
+      "share_of_opaque_sample": 0.3523
+    },
+    {
+      "hex": "#E1DC15",
+      "rgb": [
+        225,
+        220,
+        21
+      ],
+      "share_of_opaque_sample": 0.0176
+    },
+    {
+      "hex": "#9C9A10",
+      "rgb": [
+        156,
+        154,
+        16
+      ],
+      "share_of_opaque_sample": 0.0139
+    },
+    {
+      "hex": "#595808",
+      "rgb": [
+        89,
+        88,
+        8
+      ],
+      "share_of_opaque_sample": 0.0126
+    },
+    {
+      "hex": "#FDF721",
+      "rgb": [
+        253,
+        247,
+        33
+      ],
+      "share_of_opaque_sample": 0.0094
+    },
+    {
+      "hex": "#171601",
+      "rgb": [
+        23,
+        22,
+        1
+      ],
+      "share_of_opaque_sample": 0.0086
+    },
+    {
+      "hex": "#67660A",
+      "rgb": [
+        103,
+        102,
+        10
+      ],
+      "share_of_opaque_sample": 0.0073
+    },
+    {
+      "hex": "#292903",
+      "rgb": [
+        41,
+        41,
+        3
+      ],
+      "share_of_opaque_sample": 0.0072
+    },
+    {
+      "hex": "#D9D614",
+      "rgb": [
+        217,
+        214,
+        20
+      ],
+      "share_of_opaque_sample": 0.0062
+    },
+    {
+      "hex": "#87850D",
+      "rgb": [
+        135,
+        133,
+        13
+      ],
+      "share_of_opaque_sample": 0.0052
+    },
+    {
+      "hex": "#323004",
+      "rgb": [
+        50,
+        48,
+        4
+      ],
+      "share_of_opaque_sample": 0.0048
+    }
+  ],
+  "color_profile": {
+    "has_chromatic_color": true,
+    "source": "extracted",
+    "confidence": "medium"
+  },
+  "logo_quality": {
+    "resolution_score": 70,
+    "background_score": 62,
+    "edge_quality_score": 62,
+    "format_score": 92,
+    "overall_score": 69,
+    "source": "extracted",
+    "confidence": "medium",
+    "decision": "warn"
+  },
+  "notes": [
+    "Palette is quantized from mostly opaque pixels and excludes near-white.",
+    "Anti-aliasing, shadows, highlights, and photography may still appear as candidates.",
+    "Opaque images with visually uniform corners are cropped by difference from the inferred corner background; visually verify the result when the logo contains colors close to that background.",
+    "A normalized output is not automatically edge-clean. Remove halos, matte residue, isolated pixels, and jagged debris, then complete the required visual edge review before use."
+  ],
+  "normalized_logo": "/Users/huangyu/Documents/POBBOP/brand-system-work/POBBOP/assets/logo-normalized.png",
+  "source": "/Users/huangyu/Desktop/POBBOP/POBBOP品牌资产/423fdf0d-9c03-4a92-9c6e-3932d84d6e25.png",
+  "interpretation_status": "evidence_only_visual_review_required"
+}

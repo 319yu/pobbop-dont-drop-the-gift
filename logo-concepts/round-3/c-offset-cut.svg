@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 256" width="900" height="256" role="img" aria-labelledby="title">
+  <title id="title">POBBOP Offset Cut segmented wordmark</title>
+  <g fill="none" stroke="#111111" stroke-width="22" stroke-linecap="butt" stroke-linejoin="round">
+    <path d="M48 208V48H104A40 40 0 0 1 104 128H66"/>
+    <path d="M241 48A80 80 0 0 1 313 120M313 136A80 80 0 0 1 225 208M217 206A80 80 0 0 1 153 136M153 120A80 80 0 0 1 233 48"/>
+    <path d="M342 208V48H394A38 38 0 0 1 394 120H360M342 136H398A36 36 0 0 1 398 208H342"/>
+    <path d="M454 208V48H506A38 38 0 0 1 506 120H472M454 136H510A36 36 0 0 1 510 208H454"/>
+    <path d="M655 48A80 80 0 0 1 727 120M727 136A80 80 0 0 1 639 208M631 206A80 80 0 0 1 567 136M567 120A80 80 0 0 1 647 48"/>
+    <path d="M756 208V48H812A40 40 0 0 1 812 128H774"/>
+  </g>
+</svg>

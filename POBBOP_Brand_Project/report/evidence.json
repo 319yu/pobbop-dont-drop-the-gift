@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "export_qa": {
+    "status": "passed",
+    "html": {"path": "Brand_Guidelines.html", "page_count": 19, "image_count": 38},
+    "pdf": {
+      "path": "Brand_Guidelines.pdf",
+      "page_count": 19,
+      "page_size_pts": [1440, 810],
+      "fonts": ["AAAAAA+PlusJakartaSans-Regular", "FAAAAA+AlibabaPuHuiTi_3_65_Medium", "HAAAAA+AlibabaPuHuiTi_3_55_Regular"]
+    },
+    "checks": {
+      "page_count_match": true,
+      "font_loading": true,
+      "image_loading": true,
+      "logo_aspect_ratio_lock": true,
+      "missing_content": true,
+      "page_size": true,
+      "evidence_metadata": true,
+      "visible_evidence_status_absent": true,
+      "qwen_footer_content": true,
+      "intro_copy_language": true,
+      "swatch_card_alignment": true,
+      "swatch_text_vertical_centering": true,
+      "color_swatches_without_gray_backplate": true,
+      "logo_color_tile_inset": true,
+      "no_long_small_english": true,
+      "manual_visual_review": true
+    },
+    "errors": []
+  },
+  "spec_validation": {
+    "status": "passed",
+    "brand_name": "POBBOP",
+    "industry": "consumer",
+    "logo": "assets/logo.png",
+    "logo_quality": {
+      "resolution_score": 70,
+      "background_score": 62,
+      "edge_quality_score": 62,
+      "format_score": 92,
+      "overall_score": 69,
+      "source": "extracted",
+      "confidence": "high",
+      "warning": "Logo quality may affect accuracy."
+    },
+    "mode": "standard",
+    "page_ceiling": 27,
+    "asset_gate": {
+      "allowed": ["graphic_language"],
+      "recommended": ["secondary_colors", "gradient"],
+      "omitted": [
+        {"asset": "logo_lockups", "reason": "Insufficient brand evidence. Recommendation only."},
+        {"asset": "small_format_mark", "reason": "Insufficient brand evidence. Recommendation only."},
+        {"asset": "co_branding", "reason": "Insufficient brand evidence. Recommendation only."},
+        {"asset": "imagery", "reason": "Insufficient brand evidence. Recommendation only."},
+        {"asset": "expression", "reason": "Insufficient brand evidence. Recommendation only."}
+      ],
+      "blocked": []
+    },
+    "html_page_count": 19,
+    "evidence_metadata_count": 14
+  }
+}
