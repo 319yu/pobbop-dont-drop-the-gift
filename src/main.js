@@ -5,7 +5,7 @@ import { COLORS, titleFor } from './config.js';
 
 const app=document.querySelector('#app');
 document.documentElement.style.setProperty('--game-bg', `url('${import.meta.env.BASE_URL}assets/ai-editorial-background.png')`);
-document.documentElement.style.setProperty('--box-atlas', `url('${import.meta.env.BASE_URL}assets/pobbop-box-atlas.png')`);
+for(const type of ['classic','mirror','bouncy'])document.documentElement.style.setProperty(`--box-${type}`,`url('${import.meta.env.BASE_URL}assets/boxes/${type}.png')`);
 app.innerHTML=`
 <main class="game-shell">
   <canvas id="game" aria-label="POBBOP gift stacking game"></canvas>

@@ -24,10 +24,10 @@ export function windSpeedMultiplier(moveDirection, windDirection) {
 }
 
 export const BOX_TYPES = {
-  classic: { label: 'CLASSIC', fill: '#1A1A1A', friction: .82, restitution: .06, density: .0025, chamfer: 4 },
-  mirror: { label: 'MIRROR', fill: '#BFC3C7', friction: .12, restitution: .12, density: .0020, chamfer: 3 },
-  bouncy: { label: 'BOUNCY', fill: '#E8F139', friction: .45, restitution: .68, density: .0017, chamfer: 12 },
-  mystery: { label: 'MYSTERY', fill: '#1A1A1A', friction: .55, restitution: .14, density: .0022, chamfer: 7 },
+  classic: { label: 'CLASSIC', fill: '#1A1A1A', friction: .82, restitution: .06, density: .0025, chamfer: 12, aspect: 657/292 },
+  mirror: { label: 'MIRROR', fill: '#BFC3C7', friction: .12, restitution: .12, density: .0020, chamfer: 12, aspect: 641/292 },
+  bouncy: { label: 'BOUNCY', fill: '#E8F139', friction: .45, restitution: .68, density: .0017, chamfer: 12, aspect: 656/296 },
+  mystery: { label: 'MYSTERY', fill: '#1A1A1A', friction: .55, restitution: .14, density: .0022, chamfer: 12, aspect: 657/292 },
 };
 
 export function chooseBoxType(score, random = Math.random) {
