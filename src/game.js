@@ -7,6 +7,7 @@ const clamp = (n, a, b) => Math.max(a, Math.min(b, n));
 export class GiftGame {
   constructor(canvas, callbacks, sound) {
     this.canvas = canvas; this.ctx = canvas.getContext('2d'); this.cb = callbacks; this.sound = sound;
+    this.boxAtlas = new Image(); this.boxAtlas.decoding = 'async'; this.boxAtlas.src = `${import.meta.env.BASE_URL}assets/pobbop-box-atlas.png`;
     this.engine = Engine.create({ enableSleeping: true }); this.engine.gravity.y = 1.05;
     this.boxes = []; this.particles = []; this.rings = []; this.score = 0; this.stageScore = 0; this.lives = 3;
     this.active = null; this.state = 'idle'; this.cameraY = 0; this.targetCameraY = 0; this.slowBoxes = 0;
@@ -223,6 +224,7 @@ export class GiftGame {
   }
   drawBox(c,b) {
     const p=b.plugin.pobbop,w=p.w,h=p.h,impact=Math.max(0,(p.impactUntil||0)-performance.now()),pulse=Math.min(1,impact/150);c.save();c.translate(b.position.x,b.position.y);c.rotate(b.angle);if(impact)c.scale(1+(p.type==='bouncy'?.04:.012)*pulse,1-(p.type==='bouncy'?.05:.015)*pulse);c.shadowColor='rgba(0,0,0,.24)';c.shadowBlur=20;c.shadowOffsetY=13;
+    if(this.boxAtlas.complete&&this.boxAtlas.naturalWidth){const crops={classic:[82,145,610,410],mirror:[748,145,610,410],bouncy:[1415,145,610,410],mystery:[82,145,610,410]},[sx,sy,sw,sh]=crops[p.type]||crops.classic;c.drawImage(this.boxAtlas,sx,sy,sw,sh,-w/2,-h/2,w,h);c.shadowBlur=0;c.shadowOffsetY=0;if(p.type==='mystery'){c.fillStyle='rgba(232,241,57,.88)';c.fillRect(-w*.08,-h/2,w*.16,h);c.fillRect(-w/2,-h*.1,w,h*.2);c.strokeStyle='rgba(25,25,25,.5)';c.lineWidth=1;c.strokeRect(-w/2+1,-h/2+1,w-2,h-2);}c.restore();return;}
     c.fillStyle=p.cfg.fill;this.roundRect(c,-w/2,-h/2,w,h,p.cfg.chamfer);c.fill();c.shadowBlur=0;c.shadowOffsetY=0;
     c.fillStyle=p.type==='mirror'?'rgba(112,117,122,.35)':p.type==='bouncy'?'rgba(174,184,33,.45)':p.type==='mystery'?'rgba(183,154,66,.34)':'rgba(255,255,255,.055)';c.beginPath();c.moveTo(w/2-9,-h/2+5);c.lineTo(w/2,-h/2);c.lineTo(w/2,h/2);c.lineTo(w/2-9,h/2-5);c.closePath();c.fill();
     c.fillStyle=p.type==='bouncy'?'#cbd526':p.type==='mirror'?'#94999e':p.type==='mystery'?'#b79a42':'#050505';c.beginPath();c.moveTo(-w/2,-h/2);c.lineTo(-w/2+10,-h/2-8);c.lineTo(w/2+10,-h/2-8);c.lineTo(w/2,-h/2);c.closePath();c.fill();

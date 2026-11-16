@@ -89,3 +89,13 @@
   .end{display:flex;padding:0;justify-content:flex-end;text-align:center;background:rgba(234,231,223,.88)}.result-snapshot{position:absolute;inset:0;border:0;opacity:.2}.result-snapshot:after{display:none}.end-copy{position:relative;z-index:1;align-items:center;width:100%;padding:76px 22px 28px}.end h2,.end .subtitle{text-align:center}.end .result strong{font-size:58px}.end-actions{justify-content:center;width:min(310px,100%)}
 }
 @media(prefers-reduced-motion:reduce){.display-gift{animation:none}.gift-installation{transform:none!important}}
+
+/* Product photography supplied by POBBOP */
+.display-gift{background-color:transparent;background-image:var(--box-atlas);background-repeat:no-repeat;background-size:330% auto;border:0;box-shadow:none}
+.display-gift:before,.display-gift:after{display:none}
+.display-gift{background-image:var(--box-atlas);background-size:326% auto;background-repeat:no-repeat}
+.display-gift.classic{background-position:0 47%}
+.display-gift.mirror{background-color:transparent;background-image:var(--box-atlas);background-position:50% 47%;background-repeat:no-repeat;background-size:326% auto}
+.display-gift.bouncy{background-color:transparent;background-image:var(--box-atlas);background-position:100% 47%;background-repeat:no-repeat;background-size:326% auto}
+.display-gift.mystery{background-color:transparent;background-image:var(--box-atlas);background-position:0 47%;background-repeat:no-repeat;background-size:326% auto;border:2px solid #b79a42}
+.display-gift.mystery:after{display:block;content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 42%,#e8f139 42% 58%,transparent 58%),linear-gradient(transparent 42%,#e8f139 42% 58%,transparent 58%);opacity:.9}
