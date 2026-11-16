@@ -26,17 +26,16 @@ export function windSpeedMultiplier(moveDirection, windDirection) {
 export const BOX_TYPES = {
   classic: { label: 'CLASSIC', fill: '#1A1A1A', friction: .82, restitution: .06, density: .0025, chamfer: 12, aspect: 657/292 },
   mirror: { label: 'MIRROR', fill: '#BFC3C7', friction: .12, restitution: .12, density: .0020, chamfer: 12, aspect: 641/292 },
-  bouncy: { label: 'BOUNCY', fill: '#E8F139', friction: .45, restitution: .68, density: .0017, chamfer: 12, aspect: 656/296 },
+  bouncy: { label: 'SPECIAL', fill: '#E8F139', friction: .52, restitution: .14, density: .0019, chamfer: 12, aspect: 656/296 },
   mystery: { label: 'MYSTERY', fill: '#1A1A1A', friction: .55, restitution: .14, density: .0022, chamfer: 12, aspect: 657/292 },
 };
 
 export function chooseBoxType(score, random = Math.random) {
   const r = random();
   if (score < 5) return 'classic';
-  if (score < 10) return r < .67 ? 'classic' : 'mirror';
-  if (score < 15) return r < .57 ? 'classic' : r < .82 ? 'mirror' : 'bouncy';
-  if (score < 20) return r < .52 ? 'classic' : r < .78 ? 'mirror' : 'bouncy';
-  return r < .50 ? 'classic' : r < .75 ? 'mirror' : r < .95 ? 'bouncy' : 'mystery';
+  if (score < 10) return r < .74 ? 'classic' : 'mirror';
+  if (score < 20) return r < .68 ? 'classic' : r < .95 ? 'mirror' : 'bouncy';
+  return r < .64 ? 'classic' : r < .94 ? 'mirror' : 'bouncy';
 }
 
 export function titleFor(score) {

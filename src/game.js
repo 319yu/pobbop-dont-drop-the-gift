@@ -20,7 +20,7 @@ export class GiftGame {
   buildWorld() {
     this.platformY = GAME.worldHeight - 155;
     this.platformWidth = this.stage.platformWidth;
-    this.platform = Bodies.rectangle(GAME.worldWidth / 2, this.platformY, this.platformWidth, 28, { isStatic: true, label: 'platform', friction: .9, chamfer: { radius: 5 } });
+    this.platform = Bodies.rectangle(GAME.worldWidth / 2, this.platformY, this.platformWidth, 28, { isStatic: true, label: 'platform', friction: .9, chamfer: { radius: 14 } });
     Composite.add(this.engine.world, this.platform);
   }
   bindPhysics() {
@@ -133,7 +133,7 @@ export class GiftGame {
     if (perfect) { this.perfectStreak++; this.sound.perfect(); this.cb.flash('PERFECT!'); this.burst(b.position.x, b.position.y, COLORS.lemon); this.rings.push({x:b.position.x,y:b.position.y,life:1}); }
     else this.perfectStreak = 0;
     if (this.perfectStreak >= 3) { this.perfectStreak = 0; this.score++; this.stageScore++; this.cb.flash('3× PERFECT · BONUS +1'); this.sound.reward(); }
-    if (p.type === 'mystery') this.applyMystery();
+    if (p.type === 'bouncy') this.applySpecial();
     if (this.score >= 10 && !this.butterflyShown) { this.butterflyShown = true; this.butterfly = { start: performance.now(), x: b.position.x, y: b.position.y }; }
     this.cb.stats(this.score, this.lives, this.stageScore); this.cb.stage(this.stage, Math.min(10, this.stageScore), this.wind);
     if (this.stageScore === 10) this.cb.flash('QUALIFIED · SURVIVE UNTIL LIVES END');
@@ -143,10 +143,10 @@ export class GiftGame {
     const candidates = [this.platform, ...this.boxes.filter(x => x !== b)].filter(x => x.position.y > b.position.y && Math.abs(x.position.x - b.position.x) < (x.bounds.max.x - x.bounds.min.x));
     return candidates.sort((a, z) => a.position.y - z.position.y)[0];
   }
-  applyMystery() {
+  applySpecial() {
     let text;
-    if (this.lives < 3) { this.lives++; text = 'MYSTERY · LIFE RESTORED'; }
-    else { this.score++; this.stageScore++; text = 'MYSTERY · BONUS +1'; }
+    if (this.lives < GAME.maxLives) { this.lives++; text = 'SPECIAL · LIFE RESTORED'; }
+    else { this.score++; this.stageScore++; text = 'SPECIAL · BONUS +1'; }
     this.sound.reward(); this.cb.flash(text);
   }
   nextLevel() {
@@ -216,7 +216,7 @@ export class GiftGame {
     }
     const c=this.ctx; c.setTransform(this.dpr,0,0,this.dpr,0,0); c.clearRect(0,0,this.viewW,this.viewH); c.save(); c.translate(this.offsetX,this.offsetY); c.scale(this.scale,this.scale); c.translate(0,-this.cameraY);
     this.drawWindZones(c,time);
-    c.fillStyle='#121212'; c.shadowColor='rgba(0,0,0,.18)'; c.shadowBlur=24; c.fillRect(this.platform.position.x-this.platformWidth/2,this.platformY-14,this.platformWidth,28); c.shadowBlur=0;
+    c.fillStyle='#121212'; c.shadowColor='rgba(0,0,0,.18)'; c.shadowBlur=24; this.roundRect(c,this.platform.position.x-this.platformWidth/2,this.platformY-14,this.platformWidth,28,14); c.fill(); c.shadowBlur=0;
     [...this.boxes, ...(this.active?[this.active]:[])].forEach(b=>this.drawBox(c,b));
     this.particles.forEach(p=>{c.globalAlpha=p.life;c.fillStyle=p.color;c.beginPath();c.arc(p.x,p.y,4,0,Math.PI*2);c.fill();}); c.globalAlpha=1;
     this.rings.forEach(r=>{c.globalAlpha=r.life;c.strokeStyle=COLORS.lemon;c.lineWidth=3;c.beginPath();c.ellipse(r.x,r.y,35+(1-r.life)*90,18+(1-r.life)*35,0,0,Math.PI*2);c.stroke();});c.globalAlpha=1;
