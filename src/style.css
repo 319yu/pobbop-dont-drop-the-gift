@@ -130,3 +130,32 @@ button,.primary,.end-actions a,.choice-actions button,.hud button{border-radius:
   .hero-product.butterfly{left:-6%;top:8%;width:clamp(90px,29vw,136px)}
   .hero-ribbon{width:125vw;height:34%;top:48%}
 }
+
+/* Campaign home — reconstructed from the supplied art direction */
+.start{padding:0;overflow:hidden;background:radial-gradient(ellipse at 50% 102%,rgba(255,255,255,.94) 0 13%,rgba(255,255,255,.2) 42%,transparent 62%),linear-gradient(120deg,#f6eadf 0%,#f0dfd1 42%,#f8eee6 70%,#e7d5c9 100%)}
+.start:before{left:auto;right:-8%;top:18%;bottom:-8%;width:42%;border:3px solid rgba(255,255,255,.78);border-radius:50% 0 0 0;background:repeating-linear-gradient(90deg,rgba(255,255,255,.22) 0 2px,transparent 2px 10px);transform:rotate(-7deg)}
+.start:after{left:0;right:0;top:auto;bottom:0;width:auto;height:18%;background:linear-gradient(180deg,rgba(255,255,255,0),rgba(255,255,255,.58));border:0}
+.start-index{z-index:4;top:34px;left:4.2%;right:4.2%;padding:14px 0;border:0;font-size:10px;letter-spacing:.22em}
+.gift-installation{z-index:1;inset:0;overflow:visible;transform:none;transition:none}
+.campaign-products{position:absolute;inset:0;width:100%;height:100%;object-fit:fill;user-select:none}
+.campaign-left{transform:scale(.88);transform-origin:center bottom}
+.campaign-right{display:none}
+.start-copy{z-index:3;position:absolute;left:50%;top:21.5%;transform:translateX(-50%);width:min(760px,62vw)}
+.start .eyebrow{margin:0 0 28px;font-size:13px;letter-spacing:.25em}
+.start h1{font-size:clamp(68px,7.15vw,108px);line-height:.9;letter-spacing:-.07em;white-space:nowrap;text-shadow:none}
+.start .subtitle{margin:28px 0 34px;font-size:clamp(16px,1.65vw,24px);letter-spacing:.27em}
+.start .primary{min-width:400px;min-height:76px;border:0;border-radius:999px;font-size:18px;box-shadow:8px 10px 0 #111}
+.start .primary i{margin-left:58px;font-size:30px}
+.start .control-guide{margin-top:44px;gap:24px}
+.start .control-guide span{padding:0;border:1px solid #1a1a1a;border-radius:10px;background:rgba(247,235,225,.72);font-size:11px;overflow:hidden}
+.start .control-guide b{display:inline-block;padding:10px 12px;border-right:1px solid #1a1a1a;margin-right:10px}
+.start .hint{margin-top:26px;color:#1a1a1a;font-size:9px;letter-spacing:.2em}
+
+@media(max-width:760px){
+  .start-index{top:42px;left:15px;right:15px;font-size:5px;padding:8px 0}
+  .campaign-products{object-fit:cover;object-position:center}.campaign-left,.campaign-right{clip-path:none;transform:none}.campaign-right{display:none}.gift-installation{inset:0;opacity:.48}
+  .start-copy{position:absolute;top:31%;width:94vw}.start .eyebrow{font-size:7px;margin-bottom:18px}
+  .start h1{font-size:clamp(38px,11vw,48px);line-height:.9}.start .subtitle{font-size:11px;margin:20px 0 26px;letter-spacing:.2em}
+  .start .primary{min-width:min(300px,80vw);min-height:60px;font-size:13px}.start .primary i{margin-left:38px;font-size:22px}
+  .start .control-guide{margin-top:30px}.start .control-guide span{font-size:9px;padding:10px 14px}.start .control-guide b{display:inline;padding:0;border:0;margin-right:5px}.start .hint{font-size:7px;margin-top:18px}
+}
