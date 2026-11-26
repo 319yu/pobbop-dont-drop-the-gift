@@ -24,9 +24,9 @@ export function windSpeedMultiplier(moveDirection, windDirection) {
 }
 
 export const BOX_TYPES = {
-  classic: { label: 'CLASSIC', fill: '#1A1A1A', friction: .82, restitution: .06, density: .0025, chamfer: 12, aspect: 657/292 },
-  mirror: { label: 'MIRROR', fill: '#BFC3C7', friction: .12, restitution: .12, density: .0020, chamfer: 12, aspect: 641/292 },
-  bouncy: { label: 'SPECIAL', fill: '#E8F139', friction: .52, restitution: .14, density: .0019, chamfer: 12, aspect: 656/296 },
+  classic: { label: 'CLASSIC', fill: '#1A1A1A', friction: .88, frictionStatic: 1.15, frictionAir: .012, restitution: .025, density: .0025, chamfer: 12, aspect: 657/292 },
+  mirror: { label: 'MIRROR', fill: '#BFC3C7', friction: .12, frictionStatic: .28, frictionAir: .008, restitution: .06, density: .0020, chamfer: 12, aspect: 641/292 },
+  bouncy: { label: 'SPECIAL', fill: '#E8F139', friction: .58, frictionStatic: .82, frictionAir: .011, restitution: .06, density: .0019, chamfer: 12, aspect: 656/296 },
   mystery: { label: 'MYSTERY', fill: '#1A1A1A', friction: .55, restitution: .14, density: .0022, chamfer: 12, aspect: 657/292 },
 };
 

@@ -61,7 +61,7 @@ export class GiftGame {
     // Keep gifts dynamic for their entire lifetime. Before release we drive the
     // body kinematically along the rail; after release we simply stop driving
     // it and gravity takes over. This avoids unreliable static/dynamic toggles.
-    const body = Bodies.rectangle(120, topY, w, h, { label: 'gift', friction: cfg.friction, restitution: cfg.restitution, density: cfg.density, chamfer: { radius: cfg.chamfer } });
+    const body = Bodies.rectangle(120, topY, w, h, { label: 'gift', friction: cfg.friction, frictionStatic: cfg.frictionStatic, frictionAir: cfg.frictionAir, restitution: cfg.restitution, density: cfg.density, chamfer: { radius: cfg.chamfer } });
     body.plugin.pobbop = { type, cfg, w, h, scored: false, failed: false, released: false, stableSince: 0, direction: 1, speed: GAME.baseSpeed * speedScale, windMultiplier: 1 };
     Composite.add(this.engine.world, body); this.active = body;
   }
